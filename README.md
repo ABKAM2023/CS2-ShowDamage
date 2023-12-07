@@ -1,5 +1,26 @@
 # CS2-ShowDamage
+# EN
+- **ShowDamage** - displays information about inflicted damage on the screen.
+- **Video demonstration - [https://youtu.be/BiAjXuetyT8](https://youtu.be/AeJCixkRzyU)**
 
+# Установка
+1. Install [Metamod:Source](https://www.sourcemm.net/downloads.php/?branch=master) and [CounterStrikeSharp](https://github.com/roflmuffin/CounterStrikeSharp).
+2. Download ShowDamage
+3. Unzip the archive and upload it to your game server
+
+# Main Config (Config.yml)
+```
+grenadeDamageMessage: "Общий урон от гранаты: <font color='red'>{0}</font>"
+damageMessage: "Урон: <font color='red'>{0}♥</font>, Остаток HP: <font color='green'>{1}❤</font>, Попадание: <font color='yellow'>{2}</font>"
+showDamageEnabledMessage: '[ {Green}ShowDamage{White} ] Отображение урона {Green}включено{White}.'
+showDamageDisabledMessage: '[ {Red}ShowDamage{White} ] Отображение урона {Red}отключено{White}.'
+```
+
+# Команды
+- `!damage` turn off/on damage display
+
+
+# RU
 - **ShowDamage** - отображает на экране информацию о нанесенных повреждениях.
 - **Видео-демонстрация - https://youtu.be/BiAjXuetyT8**
 
@@ -16,5 +37,5 @@ showDamageEnabledMessage: '[ {Green}ShowDamage{White} ] Отображение �
 showDamageDisabledMessage: '[ {Red}ShowDamage{White} ] Отображение урона {Red}отключено{White}.'
 ```
 
-# Команды
+# Commands
 - `!damage` выключить/включить показ урона
