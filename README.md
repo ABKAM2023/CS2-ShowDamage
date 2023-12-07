@@ -6,7 +6,7 @@
 # CS2-ShowDamage
 # EN
 - **ShowDamage** - displays information about inflicted damage on the screen.
-- **Video demonstration - https://www.youtube.com/watch?v=AeJCixkRzyU&ab_channel=ABKAM
+- **Video demonstration - https://www.youtube.com/watch?v=AeJCixkRzyU&ab_channel=ABKAM**
 
 # Installation
 1. Install [Metamod:Source](https://www.sourcemm.net/downloads.php/?branch=master) and [CounterStrikeSharp](https://github.com/roflmuffin/CounterStrikeSharp).
