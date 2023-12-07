@@ -21,7 +21,7 @@ showDamageEnabledMessage: '[ {Green}ShowDamage{White} ] Damage display {Green}en
 showDamageDisabledMessage: '[ {Red}ShowDamage{White} ] Damage display {Red}disabled{White}.'
 ```
 
-# Команды
+# Commands
 - `!damage` turn off/on damage display
 
 
