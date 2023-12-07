@@ -42,5 +42,5 @@ showDamageEnabledMessage: '[ {Green}ShowDamage{White} ] Отображение �
 showDamageDisabledMessage: '[ {Red}ShowDamage{White} ] Отображение урона {Red}отключено{White}.'
 ```
 
-# Commands
+# Команды
 - `!damage` выключить/включить показ урона
