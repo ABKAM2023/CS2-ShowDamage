@@ -3,7 +3,7 @@
 - **ShowDamage** - displays information about inflicted damage on the screen.
 - **Video demonstration - [https://youtu.be/BiAjXuetyT8](https://youtu.be/AeJCixkRzyU)**
 
-# Установка
+# Installation
 1. Install [Metamod:Source](https://www.sourcemm.net/downloads.php/?branch=master) and [CounterStrikeSharp](https://github.com/roflmuffin/CounterStrikeSharp).
 2. Download ShowDamage
 3. Unzip the archive and upload it to your game server
