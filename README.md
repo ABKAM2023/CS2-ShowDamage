@@ -10,10 +10,10 @@
 
 # Main Config (Config.yml)
 ```
-grenadeDamageMessage: "Общий урон от гранаты: <font color='red'>{0}</font>"
-damageMessage: "Урон: <font color='red'>{0}♥</font>, Остаток HP: <font color='green'>{1}❤</font>, Попадание: <font color='yellow'>{2}</font>"
-showDamageEnabledMessage: '[ {Green}ShowDamage{White} ] Отображение урона {Green}включено{White}.'
-showDamageDisabledMessage: '[ {Red}ShowDamage{White} ] Отображение урона {Red}отключено{White}.'
+grenadeDamageMessage: "Total grenade damage: <font color='red'>{0}❤</font>"
+damageMessage: "Damage: <font color='red'>{0}♥</font>, Remaining HP: <font color='green'>{1}❤</font>, Hit: <font color='yellow'>{2}</font>"
+showDamageEnabledMessage: '[ {Green}ShowDamage{White} ] Damage display {Green}enabled{White}.'
+showDamageDisabledMessage: '[ {Red}ShowDamage{White} ] Damage display {Red}disabled{White}.'
 ```
 
 # Команды
