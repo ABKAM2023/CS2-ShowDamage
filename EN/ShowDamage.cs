@@ -31,6 +31,10 @@ public class ShowDamagePlugin : BasePlugin
             string json = File.ReadAllText(showDamageFilePath);
             showDamageEnabled = JsonConvert.DeserializeObject<Dictionary<string, bool>>(json) ?? new Dictionary<string, bool>();
         }
+        else
+        {
+            showDamageEnabled = new Dictionary<string, bool>();
+        }
     }
     private void SaveShowDamageConfig()
     {
@@ -79,21 +83,22 @@ public class ShowDamagePlugin : BasePlugin
     }
     private void ToggleShowDamage(CCSPlayerController player)
     {
-        string playerSteamId = player.SteamID.ToString(); 
-        if (!showDamageEnabled.ContainsKey(playerSteamId))
+        string playerSteamId = player.SteamID.ToString();
+
+        if (showDamageEnabled.ContainsKey(playerSteamId))
         {
-            showDamageEnabled[playerSteamId] = true;
+            showDamageEnabled.Remove(playerSteamId);
+            string enabledMessage = ReplaceColorPlaceholders(config.ShowDamageEnabledMessage);
+            player.PrintToChat(enabledMessage);
         }
         else
         {
-            showDamageEnabled[playerSteamId] = !showDamageEnabled[playerSteamId];
+            showDamageEnabled[playerSteamId] = true;
+            string disabledMessage = ReplaceColorPlaceholders(config.ShowDamageDisabledMessage);
+            player.PrintToChat(disabledMessage);
         }
 
         SaveShowDamageConfig();
-
-        string messageTemplate = showDamageEnabled[playerSteamId] ? config.ShowDamageEnabledMessage : config.ShowDamageDisabledMessage;
-        string message = ReplaceColorPlaceholders(messageTemplate);
-        player.PrintToChat(message);
     }
 
     private HookResult OnPlayerTeam(EventPlayerTeam eventInfo, GameEventInfo gameEventInfo)
@@ -123,7 +128,7 @@ public class ShowDamagePlugin : BasePlugin
                 var hitgroup = eventInfo.Hitgroup;
 
                 string attackerSteamId = attacker.SteamID.ToString();
-                if (showDamageEnabled.TryGetValue(attackerSteamId, out var isEnabled) && isEnabled)
+                if (!showDamageEnabled.ContainsKey(attackerSteamId)) 
                 {
                     if (eventInfo.Weapon == "hegrenade")
                     {
