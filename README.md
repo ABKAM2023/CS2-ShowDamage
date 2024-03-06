@@ -44,3 +44,25 @@ showDamageDisabledMessage: '[ {Red}ShowDamage{White} ] Отображение у
 
 # Команды
 - `!damage` выключить/включить показ урона
+
+
+
+# ZH
+- **ShowDamage插件** - 在屏幕上显示造成的伤害信息。
+- **视频演示 - https://www.youtube.com/watch?v=AeJCixkRzyU&ab_channel=ABKAM**
+
+# 安装
+1. 安装 [Metamod:Source](https://www.sourcemm.net/downloads.php/?branch=master) 和 [CounterStrikeSharp](https://github.com/roflmuffin/CounterStrikeSharp)。
+2. 下载 ShowDamage
+3. 解压缩文件到`Counter-Strike Global Offensive\game\csgo\addons\counterstrikesharp\plugins\ShowDamage`目录下并上传到你的游戏服务器
+
+# 主配置 (Config.yml)
+```
+grenadeDamageMessage: "手榴弹总伤害: <font color='red'>{0}❤</font>"
+damageMessage: "伤害: <font color='red'>{0}♥</font>, 剩余生命值: <font color='green'>{1}❤</font>, 命中部位: <font color='yellow'>{2}</font>"
+showDamageEnabledMessage: '[ {Green}显示伤害{White} ] 伤害显示 {Green}已开启{White}.'
+showDamageDisabledMessage: '[ {Red}显示伤害{White} ] 伤害显示 {Red}已关闭{White}.'
+```
+
+# 命令
+- `!damage` 开启/关闭伤害显示
